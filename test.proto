@@ -27,15 +27,19 @@ message DeleteRequest {
 }
 
 message GetAllResponse {
+	blablabla
 }
 
 message CreateResponse {
+	blablabla
 }
 
 message UpdateResponse {
+	blablabla
 }
 
 message DeleteResponse {
+	blablabla
 }
 
 this is the end line
