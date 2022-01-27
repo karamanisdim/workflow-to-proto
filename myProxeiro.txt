@@ -1,0 +1,20 @@
+logStream.write("\n\nservice " + serviceName + " {");
+
+for (let i in jsonObj.versions[1].nodes) {
+// Get first word from name, import if is NOT REST or end // .replace(/ .*/,'')
+  let alias = jsonObj.versions[1].nodes[i].type.alias;
+  if (alias != undefined){
+    logStream.write("\n\trpc " + alias + "(" + alias + "Request) returns (" + alias + "Response);");
+  }
+}
+logStream.write("\n}");
+
+
+// WriteStream used to append logs to file when file is ready
+// use {flags: 'a'} to append and {flags: 'w'} to erase and write a new file
+var logStream = fs.createWriteStream('test.proto', {flags: 'a'});
+logStream.write('\nInitial line...');
+logStream.write('\nInitial line...2');
+logStream.write('\nInitial line...3');
+logStream.end('\nthis is the end line');
+
