@@ -1,10 +1,5 @@
-let message: string = 'Hello, World!';
-console.log(message);
-
 import * as fs from 'fs'
-import { ids } from 'webpack';
 const jsonObj = JSON.parse(fs.readFileSync('file.json', 'utf-8'))
-console.log(jsonObj._id);
 const latestV: number = jsonObj.latestVersion;
 const serviceName = "TodoApp";
 
@@ -59,15 +54,15 @@ for (let i in jsonObj.versions[latestV].nodes) {
 
         // 3d array: outputs
         
-        aliases[1].push(inputText)
+        aliases[1].push(inputText=="" ? "\n" : inputText)
         aliases[2].push("\n\tblablabla")
     }
 }
 console.log(aliases);
 // Create proto file, first line and writeStream
 var file = new FileHandle();
-file.createFile("test.proto", "syntax = \"proto3\";");
-var logStream = fs.createWriteStream('test.proto', {flags: 'a'});
+file.createFile("output.proto", "syntax = \"proto3\";");
+var logStream = fs.createWriteStream('output.proto', {flags: 'a'});
 
 
 // Write out rpc services

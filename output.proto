@@ -8,6 +8,7 @@ service TodoApp {
 }
 
 message GetAllRequest {
+
 }
 
 message CreateRequest {
