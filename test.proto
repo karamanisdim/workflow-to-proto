@@ -1,6 +1,41 @@
 syntax = "proto3";
-blablabla
-Initial line...
-Initial line...2
-Initial line...3
+
+service TodoApp {
+	rpc GetAll(GetAllRequest) returns (GetAllResponse);
+	rpc Create(CreateRequest) returns (CreateResponse);
+	rpc Update(UpdateRequest) returns (UpdateResponse);
+	rpc Delete(DeleteRequest) returns (DeleteResponse);
+}
+
+message GetAllRequest {
+}
+
+message CreateRequest {
+	string id = 1;
+	string text = 2;
+	string status = 3;
+}
+
+message UpdateRequest {
+	string id = 1;
+	string text = 2;
+	string status = 3;
+}
+
+message DeleteRequest {
+	string id = 1;
+}
+
+message GetAllResponse {
+}
+
+message CreateResponse {
+}
+
+message UpdateResponse {
+}
+
+message DeleteResponse {
+}
+
 this is the end line
