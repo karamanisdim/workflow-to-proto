@@ -8,23 +8,19 @@ service TodoApp {
 }
 
 message GetAllRequest {
-
+	Struct data = 1;
 }
 
 message CreateRequest {
-	optional string id = 1;
-	string text = 2;
-	string status = 3;
+	string wasCreated = 1;
 }
 
 message UpdateRequest {
-	string id = 1;
-	string text = 2;
-	string status = 3;
+	string data = 1;
 }
 
 message DeleteRequest {
-	string id = 1;
+	string wasDeleted = 1;
 }
 
 message GetAllResponse {

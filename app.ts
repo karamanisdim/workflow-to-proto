@@ -155,7 +155,7 @@ for (let i in aliases[0]) {
     let alias = aliases[0][i].charAt(0).toUpperCase() + aliases[0][i].slice(1);
     logStream.write("\n\nmessage " + alias + "Request {");
     
-    logStream.write(aliases[2][i]);
+    logStream.write(aliases[3][i]);
 
     logStream.write("\n}");
 }
@@ -170,7 +170,7 @@ for (let i in aliases[0]) {
     logStream.write("\n}");
 }
 
-logStream.end('\n\nthis is the end line');
+logStream.end('\n');
 
 
 
