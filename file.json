@@ -114,7 +114,7 @@
                                 "name": "id",
                                 "type": "string",
                                 "evalValue": "payload.id ?? uuid()",
-                                "required": true
+                                "required": false
                             },
                             {
                                 "name": "text",
