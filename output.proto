@@ -8,19 +8,23 @@ service TodoApp {
 }
 
 message GetAllRequest {
-	Struct data = 1;
+
 }
 
 message CreateRequest {
-	string wasCreated = 1;
+	optional string id = 1;
+	string text = 2;
+	string status = 3;
 }
 
 message UpdateRequest {
-	string data = 1;
+	string id = 1;
+	string text = 2;
+	string status = 3;
 }
 
 message DeleteRequest {
-	string wasDeleted = 1;
+	string id = 1;
 }
 
 message GetAllResponse {
@@ -38,5 +42,3 @@ message UpdateResponse {
 message DeleteResponse {
 	string wasDeleted = 1;
 }
-
-this is the end line
